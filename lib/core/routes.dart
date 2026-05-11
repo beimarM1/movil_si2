@@ -7,6 +7,7 @@ import '../screen/dashboard/dashboard_screen.dart';
 class AppRoutes {
   static final routes = {
     '/': (context) => const LoginScreen(),
+
     '/register': (context) => const RegisterScreen(),
     '/forgot': (context) => const ForgotPasswordScreen(),
     '/dashboard': (context) => const DashboardScreen(),

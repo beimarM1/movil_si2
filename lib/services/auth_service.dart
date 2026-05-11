@@ -2,22 +2,20 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class AuthService {
-  final String baseUrl = "https://backend-seguros-de-vida-production.up.railway.app/api";
+  final String baseUrl =
+      "https://backend-seguros-de-vida-production.up.railway.app/api";
 
   String? accessToken;
   String? refreshToken;
 
   // 🔐 LOGIN REAL
-  Future<bool> login(String email, String password) async {
+  Future<bool> ogin(String email, String password) async {
     final url = Uri.parse("$baseUrl/login/");
 
     final response = await http.post(
       url,
       headers: {"Content-Type": "application/json"},
-      body: jsonEncode({
-        "email": email,
-        "password": password,
-      }),
+      body: jsonEncode({"email": email, "password": password}),
     );
 
     if (response.statusCode == 200) {
@@ -43,9 +41,7 @@ class AuthService {
         "Content-Type": "application/json",
         "Authorization": "Bearer $accessToken",
       },
-      body: jsonEncode({
-        "refresh": refreshToken,
-      }),
+      body: jsonEncode({"refresh": refreshToken}),
     );
 
     accessToken = null;
@@ -59,9 +55,7 @@ class AuthService {
     final response = await http.post(
       url,
       headers: {"Content-Type": "application/json"},
-      body: jsonEncode({
-        "refresh": refreshToken,
-      }),
+      body: jsonEncode({"refresh": refreshToken}),
     );
 
     if (response.statusCode == 200) {
@@ -79,9 +73,7 @@ class AuthService {
     final response = await http.post(
       url,
       headers: {"Content-Type": "application/json"},
-      body: jsonEncode({
-        "email": email,
-      }),
+      body: jsonEncode({"email": email}),
     );
 
     return response.statusCode == 200;

@@ -9,7 +9,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Seguro de Vida',
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedMode
+      
+      
+
+
+
+
+      
+      kgjhtnhinnht
+      Banner: false,
       theme: AppTheme.lightTheme,
       initialRoute: '/',
       routes: AppRoutes.routes,
