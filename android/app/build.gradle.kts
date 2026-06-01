@@ -6,6 +6,8 @@ plugins {
 }
 
 android {
+
+    
     namespace = "com.example.seguro_de_vida"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion

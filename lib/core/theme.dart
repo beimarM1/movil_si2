@@ -4,7 +4,11 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(
+      colorScheme:
+      
+      
+      
+       ColorScheme.fromSeed(
         seedColor: Colors.blueAccent,
       ),
       scaffoldBackgroundColor: const Color(0xFFF5F7FB),

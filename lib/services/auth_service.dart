@@ -12,6 +12,11 @@ class AuthService {
   Future<bool> ogin(String email, String password) async {
     final url = Uri.parse("$baseUrl/login/");
 
+
+
+
+
+
     final response = await http.post(
       url,
       headers: {"Content-Type": "application/json"},

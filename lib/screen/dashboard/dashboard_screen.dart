@@ -13,7 +13,12 @@ class DashboardScreen extends StatelessWidget {
         title: const Text("Mi Seguro"),
         actions: [
           IconButton(
-            icon: const Icon(Icons.logout),
+            ico
+            
+            
+            
+            
+            n: const Icon(Icons.logout),
             onPressed: () async {
               await auth.logout();
               Navigator.pushReplacementNamed(context, '/');
